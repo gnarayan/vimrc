@@ -1,0 +1,7 @@
+channels:
+  - mpi4py
+  - defaults
+  - http://ssb.stsci.edu/astroconda
+  - conda-forge
+ssl_verify: true
+show_channel_urls: True
