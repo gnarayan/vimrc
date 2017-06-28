@@ -1,0 +1,4 @@
+source activate WDmodel
+export WDCALIB_ROOT='/Users/gnarayan/'
+PYSYN_CDBS=$WDCALIB_ROOT/synphot
+export PYSYN_CDBS
