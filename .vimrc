@@ -1,7 +1,7 @@
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 highlight clear
 
-let @/=''
+let @/='' 
 set hlsearch
 set nocompatible
 set incsearch
@@ -21,7 +21,7 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 "  :20  :  up to 20 lines of command-line history will be remembered
 "  %    :  saves and restores the buffer list
 "  n... :  where to save the viminfo files
-set viminfo='100,<50,f1,\"500,/100,:100
+set viminfo='100,<50,f1,\"500,/100,:100 
 
 if has("autocmd")
 aug vimrc
@@ -172,21 +172,22 @@ let g:vimtex_quickfix_ignore_all_warnings = 1
 
 
 " =============== YouCompleteMe =============
-set completeopt-=preview
+set completeopt-=preview  
 
-nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>  
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>  
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>  
 
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf=0
-let g:ycm_cache_omnifunc=0
-let g:ycm_complete_in_comments=1
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'  
+let g:ycm_confirm_extra_conf=0  
+let g:ycm_cache_omnifunc=0  
+let g:ycm_complete_in_comments=1  
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
-if filereadable(glob("~/.vimrc.local"))
+if filereadable(glob("~/.vimrc.local")) 
     source ~/.vimrc.local
 endif
