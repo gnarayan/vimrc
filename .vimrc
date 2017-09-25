@@ -51,6 +51,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'lervag/vimtex'
 Plugin 'valloric/youcompleteme'
+Plugin 'tenfyzhong/CompleteParameter.vim'
 
 " All of the Plugins must be added before the following line
 call vundle#end()            " required
@@ -184,6 +185,12 @@ let g:ycm_cache_omnifunc=0
 let g:ycm_complete_in_comments=1  
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
+" =============== CompleteParameter =============
+inoremap <silent><expr> ( complete_parameter#pre_complete("()")
+smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
+imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
