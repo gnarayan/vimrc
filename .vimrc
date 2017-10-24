@@ -87,7 +87,7 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-"autocmd FileType c,cpp,java,php,ruby,python,javascript,sql autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,javascript,sql autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " ================ Auto Update .vimrc for All Vim server ===============
 function! UpdateVimRC()
@@ -183,6 +183,10 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0  
 let g:ycm_cache_omnifunc=0  
 let g:ycm_complete_in_comments=1  
+let g:ycm_show_diagnostics_ui = 1
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_error_symbol = '!!'
+let g:ycm_warning_symbol = '>>'
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 " =============== CompleteParameter =============
