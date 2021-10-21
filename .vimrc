@@ -50,8 +50,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'lervag/vimtex'
-Plugin 'valloric/youcompleteme'
-Plugin 'tenfyzhong/CompleteParameter.vim'
 
 " All of the Plugins must be added before the following line
 call vundle#end()            " required
@@ -172,29 +170,6 @@ let g:session_autosave = 'yes'
 let g:vimtex_quickfix_ignore_all_warnings = 1
 
 
-" =============== YouCompleteMe =============
-set completeopt-=preview  
-
-nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>  
-nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>  
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>  
-
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'  
-let g:ycm_confirm_extra_conf=0  
-let g:ycm_cache_omnifunc=0  
-let g:ycm_complete_in_comments=1  
-let g:ycm_show_diagnostics_ui = 1
-let g:ycm_enable_diagnostic_signs = 1
-let g:ycm_error_symbol = '!!'
-let g:ycm_warning_symbol = '>>'
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-
-" =============== CompleteParameter =============
-inoremap <silent><expr> ( complete_parameter#pre_complete("()")
-smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
-imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
-smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
-imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
