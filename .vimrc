@@ -7,6 +7,7 @@ set nocompatible
 set incsearch
 set smartcase
 set shm=I
+set mouse=a
 set showmatch
 set spelllang=en_us
 set spellfile=~/.vim/spellfile.add
